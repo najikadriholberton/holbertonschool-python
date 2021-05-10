@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-    6-square.py
+    101-square.py
     Module that defines a Square
     return area
 """
@@ -86,18 +86,19 @@ class Square:
             print()
 
     def __str__(self):
-        """represent square"""
-        result = ""
+        """ Function that returns the str rep of the object
+        """
+        s = ""
         if self.__size != 0:
             for k in range(self.__position[1]):
-                result += "\n"
+                s += "\n"
 
             for i in range(self.__size):
                 for l in range(self.__position[0]):
-                    result += " "
+                    s += " "
                 for j in range(self.__size):
-                    result += "#"
-                result += "\n" if i < self.__size-1 else ""
+                    s += "#"
+                s += "\n"
         else:
-            result += "\n"
-        return result
+            s += "\n"
+        return s[:-1]
