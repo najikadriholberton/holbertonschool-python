@@ -85,7 +85,7 @@ class Square:
         else:
             print()
 
-    def __repr__(self):
+    def __str__(self):
         """represent square"""
         result = ""
         if self.__size != 0:
