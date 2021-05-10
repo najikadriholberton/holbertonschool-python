@@ -15,10 +15,12 @@ class Square:
 
     @property
     def position(self):
+        """space position"""
         return self.__position
 
     @position.setter
     def position(self, value):
+        """set space position"""
         conditions_met = type(value) == tuple
         conditions_met = conditions_met and type(value[0]) == int
         conditions_met = conditions_met and type(value[1]) == int
@@ -32,10 +34,12 @@ class Square:
 
     @property
     def size(self):
+        """get square size"""
         return self.__size
 
     @size.setter
     def size(self, val):
+        """set square size"""
         self.__size = val
 
         size = self.__size
