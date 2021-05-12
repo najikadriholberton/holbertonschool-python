@@ -1,0 +1,40 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+
+>>> test_string = "adipiscing elit. Quonam modo?"
+>>> text_indentation(test_string)
+adipiscing elit.
+<BLANKLINE>
+Quonam modo?
+<BLANKLINE>
+
+>>> text_indentation(123)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+>>> text_indentation("    hello")
+hello
+
+>>> text_indentation("world      ")
+world
+
+
+>>> text_indentation("")
+
+>>> text_indentation("  hello .?. world   ")
+hello .
+<BLANKLINE>
+?
+<BLANKLINE>
+.
+<BLANKLINE>
+world
+
+>>> text_indentation("hello .    ?    .  world")
+hello .
+<BLANKLINE>
+?
+<BLANKLINE>
+.
+<BLANKLINE>
+world
