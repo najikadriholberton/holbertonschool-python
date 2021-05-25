@@ -1,18 +1,19 @@
 #!/usr/bin/python3
+
 """
-14-main - Pascals Triangle
+pascal_triangle Module
 """
 
 
 def pascal_triangle(n):
+    """Returns a list of lists of integers of n"""
+    res = []
     if n <= 0:
-        return []
-
-    my_list = [[1]]
-    for count in range(1, n):
+        return res
+    for x in range(n):
         row = [1]
-        for elem in range(1, count):
-            row.append(my_list[count - 1][elem - 1] + my_list[count - 1][elem])
-        row.append(1)
-        my_list.append(row)
-    return my_list
+        if x > 0:
+            for j in range(x):
+                row.append(sum(res[-1][j:j + 2]))
+        res.append(row)
+    return res
