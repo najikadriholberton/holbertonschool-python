@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""""Find peak in an unsorted list""""
+"""Find peak in an unsorted list"""
 
 
 def find_peak(list_of_integers):
